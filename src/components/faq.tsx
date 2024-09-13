@@ -56,7 +56,7 @@ export function FAQ() {
             <AccordionContent>
               Currently, we use Telegram as our primary means of communication
               due to its security features. If you have concerns, please mention
-              them in the form's additional comments section.
+              them in the form&#39;s additional comments section.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
