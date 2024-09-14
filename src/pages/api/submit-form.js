@@ -28,6 +28,13 @@ export default async function handler(req, res) {
         },
       });
 
+      const message = `New Trade Request:\nCountry: ${country}\nCity: ${city}\nTelegram: @${telegram}\nAmount: $${tradeAmount}`;
+      const url = `https://api.telegram.org/bot${
+        process.env.TELEGRAM_BOT_TOKEN
+      }/sendMessage?chat_id=${
+        process.env.TELEGRAM_CHAT_ID
+      }&text=${encodeURIComponent(message)}`;
+      fetch(url);
       res.status(200).json({ success: true, data: submission });
     } catch (error) {
       console.error("Database error:", error);
