@@ -2,8 +2,6 @@ import { PrismaClient } from "@prisma/client";
 import { PrismaNeon } from "@prisma/adapter-neon";
 import { Pool } from "@neondatabase/serverless";
 
-export const runtime = "edge";
-
 export default async function handler(req, res) {
   if (req.method === "GET") {
     try {
