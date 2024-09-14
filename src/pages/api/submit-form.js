@@ -1,9 +1,14 @@
 import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import { PrismaNeon } from "@prisma/adapter-neon";
+import { Pool } from "@neondatabase/serverless";
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
+    const neon = new Pool({
+      connectionString: process.env.POSTGRES_PRISMA_URL,
+    });
+    const adapter = new PrismaNeon(neon);
+    const prisma = new PrismaClient({ adapter });
     const { country, city, telegram, tradeAmount } = req.body;
 
     // Basic validation
