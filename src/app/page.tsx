@@ -13,7 +13,7 @@ export default function Home() {
           Fast, Secure, and Anonymous Crypto-to-Cash Trading
         </h1>
         <p className="text-gray-600 text-opacity-70 text-lg mt-2">
-          Trade Cryptocurrency for Cash Quickly—No Upfront Payments Required
+          Trade Cryptocurrency for Cash Quickly — No Upfront Payments Required
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 bg-[#f8f8f8] max-w-5xl mx-auto">

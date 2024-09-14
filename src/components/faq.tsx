@@ -59,6 +59,14 @@ export function FAQ() {
               them in the form&#39;s additional comments section.
             </AccordionContent>
           </AccordionItem>
+          <AccordionItem value="item-6">
+            <AccordionTrigger>
+              What is the minimum trade amount?
+            </AccordionTrigger>
+            <AccordionContent>
+              The minimum trade amount is $2000.
+            </AccordionContent>
+          </AccordionItem>
         </Accordion>
       </div>
     </div>
