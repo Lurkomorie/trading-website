@@ -25,6 +25,7 @@ export const VideoLogo = () => {
       src="/assets/logo.mp4"
       muted
       autoPlay
+      playsInline
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     />

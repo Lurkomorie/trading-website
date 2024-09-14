@@ -5,11 +5,11 @@ import { VideoLogo } from "../components/video-logo";
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#f8f8f8] flex flex-col justify-center items-center pb-12">
-      <div className="text-center py-8">
-        <div className="flex flex-col items-center pb-6">
+      <div className="text-center pt-8 md:py-8 px-4">
+        <div className="flex flex-col items-center pb-0 md:pb-6">
           <VideoLogo />
         </div>
-        <h1 className="text-2xl md:text-4xl font-bold text-gray-900">
+        <h1 className="text-2xl md:text-4xl font-bold text-gray-900 pt-4 md:pt-0">
           Fast, Secure, and Anonymous Crypto-to-Cash Trading
         </h1>
         <p className="text-gray-600 text-opacity-70 text-lg mt-2">

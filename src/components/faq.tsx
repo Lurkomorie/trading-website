@@ -14,7 +14,7 @@ export function FAQ() {
             <AccordionTrigger>
               What happens after I submit the form?
             </AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent className="text-left">
               Once you submit the form, our agent will contact you via your
               provided Telegram username to discuss the details and next steps.
             </AccordionContent>
@@ -23,7 +23,7 @@ export function FAQ() {
             <AccordionTrigger>
               Why do I need to pass a compliance check?
             </AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent className="text-left">
               The compliance check ensures that your cryptocurrency wallet
               adheres to legal standards and is free from any illicit
               activities. This helps us maintain a secure trading environment
@@ -34,7 +34,7 @@ export function FAQ() {
             <AccordionTrigger>
               How long does the entire process take?
             </AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent className="text-left">
               The process typically takes less than 24 hours from the time you
               submit the form to the completion of the transaction.
             </AccordionContent>
@@ -43,7 +43,7 @@ export function FAQ() {
             <AccordionTrigger>
               Is my personal information secure?
             </AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent className="text-left">
               Absolutely. We prioritize your privacy and security. Your
               information will be kept confidential and used solely for
               facilitating the transaction.
@@ -53,7 +53,7 @@ export function FAQ() {
             <AccordionTrigger className="text-left">
               Can I choose a different method of contact besides Telegram?
             </AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent className="text-left">
               Currently, we use Telegram as our primary means of communication
               due to its security features. If you have concerns, please mention
               them in the form&#39;s additional comments section.
@@ -63,7 +63,7 @@ export function FAQ() {
             <AccordionTrigger>
               What is the minimum trade amount?
             </AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent className="text-left">
               The minimum trade amount is $2000.
             </AccordionContent>
           </AccordionItem>

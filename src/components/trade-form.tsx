@@ -39,6 +39,15 @@ export function TradeFormComponent(): JSX.Element {
   const selectedCity = watch("city");
 
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
+    if (!data.country || !data.city || !data.telegram || !data.tradeAmount) {
+      toast({
+        title: "Form Incomplete",
+        description: "Please fill out all fields.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     try {
       console.log("DATA", data);
       const response = await fetch("/api/submit-form", {
@@ -140,11 +149,6 @@ export function TradeFormComponent(): JSX.Element {
                   ))}
                 </SelectContent>
               </Select>
-              {errors.country && (
-                <p className="text-red-500 text-xs mt-1">
-                  {errors.country.message}
-                </p>
-              )}
             </div>
             {/* City Field */}
             <div className="space-y-2">
@@ -179,11 +183,6 @@ export function TradeFormComponent(): JSX.Element {
                     ))}
                 </SelectContent>
               </Select>
-              {errors.city && (
-                <p className="text-red-500 text-xs mt-1">
-                  {errors.city.message}
-                </p>
-              )}
             </div>
             {/* Telegram Field */}
             <div className="space-y-2">
@@ -209,11 +208,6 @@ export function TradeFormComponent(): JSX.Element {
                   placeholder="Username"
                 />
               </div>
-              {errors.telegram && (
-                <p className="text-red-500 text-xs mt-1">
-                  {errors.telegram.message}
-                </p>
-              )}
             </div>
             {/* Amount Field */}
             <div className="space-y-2">
@@ -242,11 +236,6 @@ export function TradeFormComponent(): JSX.Element {
                   }`}
                 />
               </div>
-              {errors.tradeAmount && (
-                <p className="text-red-500 text-xs mt-1">
-                  {errors.tradeAmount.message}
-                </p>
-              )}
             </div>
           </div>
           <Button
