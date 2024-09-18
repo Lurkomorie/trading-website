@@ -31,7 +31,7 @@ export default function Home() {
             href="https://t.me/bigboss_exchange"
             className="text-blue-500 hover:text-blue-700 cursor-pointer"
           >
-            @bigboss
+            @bigboss_exchange
           </a>
         </p>
       </div>
