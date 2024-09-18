@@ -4,7 +4,7 @@ import { VideoLogo } from "../components/video-logo";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#f8f8f8] flex flex-col justify-center items-center pb-12">
+    <div className="min-h-screen bg-[#f8f8f8] flex flex-col justify-center items-center pb-12 relative">
       <div className="text-center pt-8 md:py-8 px-4">
         <div className="flex flex-col items-center pb-0 md:pb-6">
           <VideoLogo />
@@ -23,6 +23,17 @@ export default function Home() {
         <div className="col-span-1">
           <FAQ />
         </div>
+      </div>
+      <div className="absolute bottom-2">
+        <p className="text-gray-900 text-2xl md:text-3xl">
+          or dm directly{" "}
+          <a
+            href="https://t.me/bigboss_exchange"
+            className="text-blue-500 hover:text-blue-700 cursor-pointer"
+          >
+            @bigboss
+          </a>
+        </p>
       </div>
     </div>
   );

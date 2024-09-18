@@ -16,7 +16,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Magic Traders",
-  description: "Exchange your crypto for cash",
+  description:
+    "Magic Traders offers fast, secure, and anonymous crypto-to-cash trading. Exchange your cryptocurrency for cash quickly with no upfront payments required. Our platform ensures compliance and security, providing a seamless trading experience. Contact us via Telegram for personalized assistance.",
 };
 
 export default function RootLayout({
