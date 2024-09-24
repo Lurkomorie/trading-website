@@ -24,7 +24,7 @@ export default function Home() {
           <FAQ />
         </div>
       </div>
-      <div className="absolute bottom-2">
+      {/* <div className="absolute bottom-2">
         <p className="text-gray-900 text-2xl md:text-3xl">
           or dm directly{" "}
           <a
@@ -34,7 +34,7 @@ export default function Home() {
             @bigboss_exchange
           </a>
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }
