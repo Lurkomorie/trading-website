@@ -1,7 +1,6 @@
 interface Countries {
   [key: string]: string[];
 }
-
 const countries: Countries = {
   Argentina: [
     "Buenos Aires",
@@ -419,6 +418,42 @@ const countries: Countries = {
     "Nha Trang",
     "Thanh Hoa",
     "Vung Tau",
+  ],
+  Kyrgyzstan: [
+    "Bishkek",
+    "Osh",
+    "Jalal-Abad",
+    "Karakol",
+    "Tokmok",
+    "Uzgen",
+    "Talas",
+    "Naryn",
+    "Balykchy",
+    "Kara-Balta",
+  ],
+  Moldova: [
+    "Chișinău",
+    "Tiraspol",
+    "Bălți",
+    "Bender (Tighina)",
+    "Rîbnița",
+    "Cahul",
+    "Ungheni",
+    "Soroca",
+    "Orhei",
+    "Dubăsari",
+  ],
+  Bali: [
+    "Denpasar",
+    "Kuta",
+    "Ubud",
+    "Seminyak",
+    "Sanur",
+    "Nusa Dua",
+    "Canggu",
+    "Jimbaran",
+    "Uluwatu",
+    "Lovina",
   ],
 };
 

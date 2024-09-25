@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -83,6 +83,31 @@ export function TradeFormComponent(): JSX.Element {
       });
     }
   };
+
+  useEffect(() => {
+    const detectCountry = async () => {
+      try {
+        const response = await fetch("https://ipapi.co/json/");
+        if (response.ok) {
+          const data = await response.json();
+          const userCountry = data.country_name;
+
+          // Check if the detected country is in the countries list
+          if (countries.hasOwnProperty(userCountry)) {
+            setValue("country", userCountry);
+            clearErrors("country");
+          }
+        } else {
+          console.error("Failed to fetch country data:", response.statusText);
+        }
+      } catch (error) {
+        console.error("Error fetching country data:", error);
+      }
+    };
+
+    detectCountry();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleCountryChange = (value: string) => {
     setValue("country", value);
