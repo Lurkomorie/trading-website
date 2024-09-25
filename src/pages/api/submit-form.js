@@ -34,7 +34,7 @@ export default async function handler(req, res) {
       }/sendMessage?chat_id=${
         process.env.TELEGRAM_CHAT_ID
       }&text=${encodeURIComponent(message)}`;
-      fetch(url);
+      await fetch(url);
       res.status(200).json({ success: true, data: submission });
     } catch (error) {
       console.error("Database error:", error);
