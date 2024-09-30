@@ -1,6 +1,7 @@
 import { TradeFormComponent } from "../components/trade-form";
 import { FAQ } from "../components/faq";
 import { VideoLogo } from "../components/video-logo";
+import { SocialIcons } from "../components/social-icons";
 
 export default function Home() {
   return (
@@ -24,17 +25,9 @@ export default function Home() {
           <FAQ />
         </div>
       </div>
-      {/* <div className="absolute bottom-2">
-        <p className="text-gray-900 text-2xl md:text-3xl">
-          or dm directly{" "}
-          <a
-            href="https://t.me/bigboss_exchange"
-            className="text-blue-500 hover:text-blue-700 cursor-pointer"
-          >
-            @bigboss_exchange
-          </a>
-        </p>
-      </div> */}
+      <div className="absolute bottom-2">
+        <SocialIcons />
+      </div>
     </div>
   );
 }
