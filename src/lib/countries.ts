@@ -455,6 +455,18 @@ const countries: Countries = {
     "Uluwatu",
     "Lovina",
   ],
+  Dagestan: [
+    "Makhachkala",
+    "Derbent",
+    "Khasavyurt",
+    "Buynaksk",
+    "Kaspiysk",
+    "Izberbash",
+    "Kizlyar",
+    "Dagestanskiye Ogni",
+    "Kizilyurt",
+    "Yuzhno-Sukhokumsk",
+  ],
 };
 
 export default countries;

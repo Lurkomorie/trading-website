@@ -1,6 +1,6 @@
 "use client";
 
-import { Instagram, Send } from "lucide-react";
+import { Instagram, MessageCircle, Send } from "lucide-react";
 
 const socialLinks = [
   {
@@ -12,6 +12,11 @@ const socialLinks = [
     name: "Instagram",
     icon: Instagram,
     href: "https://www.instagram.com/magic__exchange/",
+  },
+  {
+    name: "WhatsApp",
+    icon: MessageCircle,
+    href: "https://wa.me/37360481845",
   },
 ];
 
