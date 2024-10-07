@@ -5,7 +5,7 @@ import { SocialIcons } from "../../components/social-icons";
 import LangChange from "../../components/lang-change";
 import Title from "../../components/title";
 
-export const Home = () => {
+export default function Home() {
   return (
     <div className="min-h-screen bg-[#f8f8f8] flex flex-col justify-center items-center pb-12 relative">
       <div className="absolute top-2 right-4">
@@ -25,6 +25,4 @@ export const Home = () => {
       </div>
     </div>
   );
-};
-
-export default Home;
+}
