@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "../hooks/use-toast";
 import countries from "../lib/countries";
+import { useTranslations } from "next-intl";
 
 interface FormValues {
   country: string;
@@ -32,6 +33,8 @@ export function TradeFormComponent(): JSX.Element {
     reset,
     clearErrors,
   } = useForm<FormValues>();
+
+  const t = useTranslations("common");
 
   const { toast } = useToast();
 
@@ -138,11 +141,11 @@ export function TradeFormComponent(): JSX.Element {
     <div className="bg-[#f8f8f8] flex items-center justify-center p-4 text-gray-900">
       <div className="w-full max-w-md h-[578px] space-y-8 bg-white p-8 border border-gray-200 shadow-md">
         <div className="space-y-2 text-center">
-          <h2 className="text-2xl font-bold text-gray-900">Start Your Trade</h2>
+          <h2 className="text-2xl font-bold text-gray-900">
+            {t("startTrade")}
+          </h2>
           <p className="text-gray-600 text-opacity-70 text-sm">
-            Please fill out the form below to initiate your transaction. One of
-            our agents will contact you via Telegram to guide you through the
-            next steps.
+            {t("startTradeDescription")}
           </p>
         </div>
         <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
@@ -153,7 +156,7 @@ export function TradeFormComponent(): JSX.Element {
                 htmlFor="country"
                 className="text-sm font-medium text-gray-700"
               >
-                Country
+                {t("country")}
               </Label>
               <Select
                 onValueChange={handleCountryChange}
@@ -164,7 +167,7 @@ export function TradeFormComponent(): JSX.Element {
                     errors.country ? "border-red-500" : ""
                   }`}
                 >
-                  <SelectValue placeholder="Select country" />
+                  <SelectValue placeholder={t("selectCountry")} />
                 </SelectTrigger>
                 <SelectContent>
                   {Object.keys(countries).map((country) => (
@@ -181,7 +184,7 @@ export function TradeFormComponent(): JSX.Element {
                 htmlFor="city"
                 className="text-sm font-medium text-gray-700"
               >
-                City
+                {t("city")}
               </Label>
               <Select
                 disabled={!selectedCountry}
@@ -195,7 +198,9 @@ export function TradeFormComponent(): JSX.Element {
                 >
                   <SelectValue
                     placeholder={
-                      selectedCountry ? "Select city" : "Select a country first"
+                      selectedCountry
+                        ? t("selectCity")
+                        : t("selectCountryFirst")
                     }
                   />
                 </SelectTrigger>
@@ -230,7 +235,7 @@ export function TradeFormComponent(): JSX.Element {
                   className={`w-full border-gray-300 hover:border-gray-400 focus:border-gray-500 focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 pl-8 transition-all duration-200 rounded-none ${
                     errors.telegram ? "border-red-500" : ""
                   }`}
-                  placeholder="Username"
+                  placeholder={t("telegramPlaceholder")}
                 />
               </div>
             </div>
@@ -240,7 +245,7 @@ export function TradeFormComponent(): JSX.Element {
                 htmlFor="tradeAmount"
                 className="text-sm font-medium text-gray-700"
               >
-                Amount (USD)
+                {t("amount")}
               </Label>
               <div className="relative">
                 <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none font-medium">
@@ -255,7 +260,7 @@ export function TradeFormComponent(): JSX.Element {
                     required: "Please enter the trade amount.",
                   })}
                   onChange={handleAmountChange}
-                  placeholder="Enter amount"
+                  placeholder={t("amountPlaceholder")}
                   className={`w-full border-gray-300 hover:border-gray-400 focus:border-gray-500 focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 pl-8 transition-all duration-200 rounded-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none ${
                     errors.tradeAmount ? "border-red-500" : ""
                   }`}
@@ -267,7 +272,7 @@ export function TradeFormComponent(): JSX.Element {
             type="submit"
             className="w-full bg-gray-900 text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-all duration-200 ease-in-out rounded-none"
           >
-            Submit Trade Request
+            {t("submitTradeRequest")}
           </Button>
         </form>
       </div>

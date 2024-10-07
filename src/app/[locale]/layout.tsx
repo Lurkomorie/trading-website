@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
-import { Toaster } from "../components/ui/toaster";
+import "../globals.css";
+import { Toaster } from "../../components/ui/toaster";
 import Script from "next/script";
+import { getMessages } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+  src: "../fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+  src: "../fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
 });
@@ -21,13 +23,16 @@ export const metadata: Metadata = {
     "Magic Traders offers fast, secure, and anonymous crypto-to-cash trading. Exchange your cryptocurrency for cash quickly with no upfront payments required. Our platform ensures compliance and security, providing a seamless trading experience. Contact us via Telegram for personalized assistance.",
 };
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
-}: Readonly<{
+  params: { locale },
+}: {
   children: React.ReactNode;
-}>) {
+  params: { locale: string };
+}) {
+  const messages = await getMessages();
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         {/* Other head elements like meta tags, title, etc. */}
         <Script id="facebook-pixel" strategy="afterInteractive">
@@ -48,8 +53,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
-        <Toaster />
+        <NextIntlClientProvider messages={messages}>
+          {children}
+          <Toaster />
+        </NextIntlClientProvider>
         <noscript>
           <img
             height="1"

@@ -1,0 +1,43 @@
+{
+    "common": {
+        "title": "Fast, Secure, and Anonymous Crypto-to-Cash Trading",
+        "description": "Trade Cryptocurrency for Cash Quickly — No Upfront Payments Required",
+        "startTrade": "Start your trade",
+        "startTradeDescription": "Please fill out the form below to initiate your transaction. One of our agents will contact you via Telegram to guide you through the next steps.",
+        "country": "Country",
+        "selectCountry": "Select country",
+        "city": "City",
+        "selectCity": "Select city",
+        "selectCountryFirst": "Select a country first",
+        "amount": "Amount (USD)",
+        "submitTradeRequest": "Submit Trade Request",
+        "amountPlaceholder": "Enter amount",
+        "telegramPlaceholder": "Username"
+    },
+    "faq": {
+        "item1": {
+            "question": "What happens after I submit the form?",
+            "answer": "Once you submit the form, our agent will contact you via your provided Telegram username to discuss the details and next steps."
+        },
+        "item2": {
+            "question": "Why do I need to pass a compliance check?",
+            "answer": "The compliance check ensures that your cryptocurrency wallet adheres to legal standards and is free from any illicit activities. This helps us maintain a secure trading environment for all users."
+        },
+        "item3": {
+            "question": "How long does the entire process take?",
+            "answer": "The process typically takes less than 24 hours from the time you submit the form to the completion of the transaction."
+        },
+        "item4": {
+            "question": "Is my personal information secure?",
+            "answer": "Absolutely. We prioritize your privacy and security. Your information will be kept confidential and used solely for facilitating the transaction."
+        },
+        "item5": {
+            "question": "Can I choose a different method of contact besides Telegram?",
+            "answer": "Currently, we use Telegram as our primary means of communication due to its security features. If you have concerns, please mention them in the form's additional comments section."
+        },
+        "item6": {
+            "question": "What is the minimum trade amount?",
+            "answer": "The minimum trade amount is $2000."
+        }
+    }
+}

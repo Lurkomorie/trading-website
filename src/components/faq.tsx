@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import {
   Accordion,
   AccordionContent,
@@ -6,65 +7,58 @@ import {
 } from "@/components/ui/accordion";
 
 export function FAQ() {
+  const t = useTranslations("faq");
+
   return (
     <div className="bg-[#f8f8f8] flex items-center justify-center p-4 text-gray-900">
       <div className="w-full max-w-md h-auto md:h-[578px] space-y-8 bg-white p-8 border border-gray-200 shadow-md">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
-            <AccordionTrigger>
-              What happens after I submit the form?
+            <AccordionTrigger className="text-left">
+              {t("item1.question")}
             </AccordionTrigger>
             <AccordionContent className="text-left">
-              Once you submit the form, our agent will contact you via your
-              provided Telegram username to discuss the details and next steps.
+              {t("item1.answer")}
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger>
-              Why do I need to pass a compliance check?
+            <AccordionTrigger className="text-left">
+              {t("item2.question")}
             </AccordionTrigger>
             <AccordionContent className="text-left">
-              The compliance check ensures that your cryptocurrency wallet
-              adheres to legal standards and is free from any illicit
-              activities. This helps us maintain a secure trading environment
-              for all users.
+              {t("item2.answer")}
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger>
-              How long does the entire process take?
+            <AccordionTrigger className="text-left">
+              {t("item3.question")}
             </AccordionTrigger>
             <AccordionContent className="text-left">
-              The process typically takes less than 24 hours from the time you
-              submit the form to the completion of the transaction.
+              {t("item3.answer")}
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-4">
-            <AccordionTrigger>
-              Is my personal information secure?
+            <AccordionTrigger className="text-left">
+              {t("item4.question")}
             </AccordionTrigger>
             <AccordionContent className="text-left">
-              Absolutely. We prioritize your privacy and security. Your
-              information will be kept confidential and used solely for
-              facilitating the transaction.
+              {t("item4.answer")}
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-5">
             <AccordionTrigger className="text-left">
-              Can I choose a different method of contact besides Telegram?
+              {t("item5.question")}
             </AccordionTrigger>
             <AccordionContent className="text-left">
-              Currently, we use Telegram as our primary means of communication
-              due to its security features. If you have concerns, please mention
-              them in the form&#39;s additional comments section.
+              {t("item5.answer")}
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-6">
-            <AccordionTrigger>
-              What is the minimum trade amount?
+            <AccordionTrigger className="text-left">
+              {t("item6.question")}
             </AccordionTrigger>
             <AccordionContent className="text-left">
-              The minimum trade amount is $2000.
+              {t("item6.answer")}
             </AccordionContent>
           </AccordionItem>
         </Accordion>
