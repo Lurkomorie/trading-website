@@ -5,6 +5,7 @@ import { Toaster } from "../../components/ui/toaster";
 import Script from "next/script";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -57,6 +58,7 @@ export default async function LocaleLayout({
           {children}
           <Toaster />
         </NextIntlClientProvider>
+        <Analytics />
         <noscript>
           <img
             height="1"
