@@ -1,4 +1,3 @@
-import { VideoLogo } from "./video-logo";
 import { useTranslations } from "next-intl";
 export default function Title() {
   const t = useTranslations("common");

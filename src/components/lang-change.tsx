@@ -6,7 +6,7 @@ export default function ChangeLanguage() {
   const lang = useLocale();
   return (
     <div className="flex flex-row gap-2">
-      {["ru", "en"].map((lng) => {
+      {["ro", "en"].map((lng) => {
         return (
           <Link href={`/${lng}`} locale={lng} key={lng}>
             <div
