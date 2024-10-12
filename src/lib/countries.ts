@@ -277,6 +277,7 @@ const countries: Countries = {
     "Taguig",
     "Zamboanga City",
   ],
+  Romania: ["Bucharest", "Cluj-Napoca", "Timișoara", "Iasi", "Constanța"],
   Russia: [
     "Chelyabinsk",
     "Kazan",

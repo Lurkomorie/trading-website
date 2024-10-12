@@ -1,0 +1,43 @@
+{
+    "common": {
+        "title": "Schimb de criptomonede în numerar",
+        "description": "Rapid, sigur și anonim, iar cel mai important, fără plăți in avans",
+        "startTrade": "Începeți schimbul",
+        "startTradeDescription": "Vă rugăm să completați formularul de mai jos pentru a începe tranzacția. Unul dintre agenții noștri vă va contacta prin Telegram pentru a efectua pașii următori.",
+        "country": "Țară",
+        "selectCountry": "Selectați țara",
+        "city": "Oraș",
+        "selectCity": "Selectați orașul",
+        "selectCountryFirst": "Înainte alegeți țara",
+        "amount": "Sumă (USD)",
+        "submitTradeRequest": "Trimiteți cererea de schimb",
+        "amountPlaceholder": "Introduceți suma",
+        "telegramPlaceholder": "Username"
+    },
+    "faq": {
+        "item1": {
+            "question": "Ce se întâmplă după trimiterea formularului?",
+            "answer": "După trimiterea formularului, agentul nostru vă va contacta prin Telegram-ul specificat de dumneavoastră pentru a discuta detaliile și pașii următori."
+        },
+        "item2": {
+            "question": "De ce este necesar să treceți prin verificarea de conformitate?",
+            "answer": "Verificarea de conformitate garantează că portofelul dumneavoastră de criptomonedă respectă standardele legale și nu este implicat în activități ilegale. Aceasta ne ajută să menținem un mediu comercial sigur pentru toți utilizatorii."
+        },
+        "item3": {
+            "question": "Cât timp durează întregul proces?",
+            "answer": "Procesul durează, de obicei, mai puțin de 24 de ore de la trimiterea formularului până la finalizarea tranzacției."
+        },
+        "item4": {
+            "question": "Cât de sigură este informația mea personală?",
+            "answer": "Sută la sută. Acordăm o prioritate deosebită confidențialității și securității dumneavoastră. Informația dumneavoastră va fi păstrată în secret și va fi utilizată exclusiv pentru efectuarea tranzacției."
+        },
+        "item5": {
+            "question": "Pot alege o altă metodă de contact, în afară de Telegram?",
+            "answer": "În prezent, folosim Telegram ca principal mijloc de comunicare datorită funcțiilor sale de securitate. Dacă aveți nelămuriri, vă rugăm să le menționați în secțiunea de comentarii suplimentare a formularului."
+        },
+        "item6": {
+            "question": "Care este suma minimă a tranzacției?",
+            "answer": "Suma minimă a tranzacției este de 2000 USD."
+        }
+    }
+}

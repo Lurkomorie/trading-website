@@ -139,7 +139,7 @@ export function TradeFormComponent(): JSX.Element {
 
   return (
     <div className="bg-[#f8f8f8] flex items-center justify-center p-4 text-gray-900">
-      <div className="w-full max-w-md h-[578px] space-y-8 bg-white p-8 border border-gray-200 shadow-md">
+      <div className="w-full max-w-md h-auto md:h-[578px] space-y-8 bg-white p-8 border border-gray-200 shadow-md">
         <div className="space-y-2 text-center">
           <h2 className="text-2xl font-bold text-gray-900">
             {t("startTrade")}
