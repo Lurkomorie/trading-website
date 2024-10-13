@@ -35,6 +35,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <head>
+        {/* Other head elements like meta tags, title, etc. */}
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
@@ -53,11 +54,11 @@ export default async function LocaleLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* <NextIntlClientProvider messages={messages}> */}
-        {children}
-        <Toaster />
+        <NextIntlClientProvider messages={messages}>
+          {children}
+          <Toaster />
+        </NextIntlClientProvider>
         <Analytics />
-        {/* </NextIntlClientProvider> */}
         <noscript>
           <img
             height="1"
@@ -71,7 +72,3 @@ export default async function LocaleLayout({
     </html>
   );
 }
-
-export const generateStaticParams = () => {
-  return ["ro", "en"].map((lng) => ({ lng }));
-};
