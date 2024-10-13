@@ -1,14 +1,14 @@
 import React from "react";
-import { TradeFormComponent } from "../../components/trade-form";
-import { FAQ } from "../../components/faq";
-import { SocialIcons } from "../../components/social-icons";
-import LangChange from "../../components/lang-change";
-import Title from "../../components/title";
+// import { TradeFormComponent } from "../../components/trade-form";
+// import { FAQ } from "../../components/faq";
+// import { SocialIcons } from "../../components/social-icons";
+// import LangChange from "../../components/lang-change";
+// import Title from "../../components/title";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#f8f8f8] flex flex-col justify-center items-center pb-12 relative">
-      <div className="absolute top-2 right-4">
+      {/* <div className="absolute top-2 right-4">
         <LangChange />
       </div>
       <Title />
@@ -22,7 +22,17 @@ export default function Home() {
       </div>
       <div className="absolute bottom-2">
         <SocialIcons />
-      </div>
+      </div> */}
     </div>
   );
+}
+
+export async function generateStaticParams() {
+  // Define the list of locales you want to generate
+  const locales = ["en", "ro"]; // Add more locales if needed
+
+  // Return the params for each locale
+  return locales.map((locale) => ({
+    locale, // This matches the dynamic segment [locale]
+  }));
 }
