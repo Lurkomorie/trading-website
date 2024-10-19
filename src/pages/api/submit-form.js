@@ -54,8 +54,6 @@ export default async function handler(req, res) {
         }),
       });
 
-      const telegramResult = await telegramResponse.json();
-
       if (!telegramResponse.ok) {
         return res
           .status(500)
